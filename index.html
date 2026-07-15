@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+
+  <!-- External CSS (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Scripts loaded with defer so they don't block page rendering -->
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>{{ site.title }}</h1>
+    <p>A GitHub Pages leaderboard project</p>
+  </header>
+
+  <main id="content">
+    <!-- Your content goes here -->
+    <section class="leaderboard" id="leaderboard">
+      <h2>Leaderboard</h2>
+      <div id="entries"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built with GitHub Pages &amp; JavaScript</p>
+  </footer>
+
+  <!-- Inline script example -->
+  <script>
+    console.log('Page loaded successfully!');
+  </script>
+</body>
+</html>
