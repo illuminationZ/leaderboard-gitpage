@@ -46,8 +46,10 @@ document.addEventListener('DOMContentLoaded', function() {
     { name: 'Alice', score: 100 },
     { name: 'Bob', score: 85 },
     { name: 'Charlie', score: 72 },
+    { name: 'Diana', score: 68 },
+    { name: 'Eve', score: 55 },
   ];
 
   console.log('Leaderboard data:', leaderboard);
-  // renderLeaderboard(leaderboard); // Uncomment to test rendering
+  renderLeaderboard(leaderboard);
 });
