@@ -1,7 +1,7 @@
 # Site settings
 title: Leaderboard GitPage
 baseurl: ""  # the subpath of your site, e.g. "/my-github-username"
-url: "https://your-username.github.io"  # the base hostname & protocol for your site
+url: "https://illuminationZ.github.io"  # the base hostname & protocol for your site
 
 # GitHub Pages configuration
 theme: jekyll-theme-minimal
