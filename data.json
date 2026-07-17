@@ -6,7 +6,7 @@
   },
   {
     "name": "Nilout",
-    "wins": 0,
+    "wins": 1,
     "losses": 0
   },
   {
@@ -32,12 +32,12 @@
   {
     "name": "Nilun",
     "wins": 0,
-    "losses": 0
+    "losses": 1
   },
   {
     "name": "Tom",
     "wins": 0,
-    "losses": 0
+    "losses": 1
   },
   {
     "name": "Victor",
@@ -53,5 +53,10 @@
     "name": "Bay",
     "wins": 0,
     "losses": 0
+  },
+  {
+    "name": "Thong",
+    "wins": 0,
+    "losses": 1
   }
 ]
