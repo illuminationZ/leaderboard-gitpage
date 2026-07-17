@@ -9,7 +9,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.6;
   color: #333;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -38,30 +38,98 @@ h2 {
   padding: 1.5rem;
 }
 
-.entry {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 1rem;
-  margin-bottom: 0.5rem;
-  background: #f6f8fa;
-  border-radius: 4px;
+/* Table-based leaderboard layout */
+.entries-table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.entry .rank {
+.entries-table th {
+  text-align: left;
+  padding: 0.75rem 0.5rem;
+  font-size: 0.85rem;
+  color: #6a737d;
+  font-weight: 600;
+  border-bottom: 2px solid #e1e4e8;
+}
+
+.entries-table td {
+  padding: 0.75rem 0.5rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #f0f3f6;
+}
+
+.entries-table tr:last-child td {
+  border-bottom: none;
+}
+
+.entries-table tr:hover td {
+  background: #f8f9fa;
+}
+
+/* Column-specific styles */
+.rank {
   font-weight: bold;
   color: #586069;
   min-width: 30px;
 }
 
-.entry .name {
+.name {
+  font-weight: 500;
   flex: 1;
-  margin-left: 1rem;
 }
 
-.entry .score {
+.tier {
+  display: inline-block;
+  min-width: 92px;
+  padding: 4px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+  background: var(--tier-bg);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38), 0 2px 8px rgba(36, 41, 46, 0.16);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.entries-table tr:hover td.tier {
+  background: var(--tier-bg);
+}
+
+.tier-challenger { --tier-bg: linear-gradient(135deg, #071b4d 0%, #1769e8 44%, #77e6ff 100%); }
+.tier-grand-master { --tier-bg: linear-gradient(135deg, #3d0710 0%, #c21f32 48%, #ffb35c 100%); }
+.tier-master { --tier-bg: linear-gradient(135deg, #27123f 0%, #7a35d8 48%, #e4b7ff 100%); }
+.tier-diamond { --tier-bg: linear-gradient(135deg, #053c5e 0%, #1fb6d9 48%, #d8fbff 100%); color: #073346; text-shadow: 0 1px 1px rgba(255, 255, 255, 0.42); }
+.tier-platinum { --tier-bg: linear-gradient(135deg, #23444a 0%, #78b9b0 48%, #e5fff8 100%); color: #18343a; text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4); }
+.tier-gold { --tier-bg: linear-gradient(135deg, #6b3d04 0%, #d6931b 48%, #ffe08a 100%); color: #3d2502; text-shadow: 0 1px 1px rgba(255, 255, 255, 0.35); }
+.tier-silver { --tier-bg: linear-gradient(135deg, #59616a 0%, #a9b3bf 48%, #f7fbff 100%); color: #27313a; text-shadow: 0 1px 1px rgba(255, 255, 255, 0.45); }
+.tier-bronze { --tier-bg: linear-gradient(135deg, #4a2412 0%, #a45b2a 48%, #e0a06a 100%); }
+
+.score {
   font-weight: bold;
   color: #24292e;
+}
+
+.winrate {
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+  font-size: 0.9rem;
+  color: #1a73e8;
+  font-weight: 600;
+}
+
+.wins {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.losses {
+  color: #dc3545;
+  font-weight: 600;
 }
 
 footer {
