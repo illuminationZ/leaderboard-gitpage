@@ -63,13 +63,13 @@ document.addEventListener('DOMContentLoaded', async function() {
       const tierClass = `tier-${tier.toLowerCase().replace(/\s+/g, '-')}`;
 
       html += `<tr>
-        <td class="rank">#${rank}</td>
-        <td class="name">${escapeHtml(entry.name)}</td>
-        <td class="tier ${tierClass}">${tier}</td>
-        <td class="score">${sp} SP</td>
-        <td class="winrate">${wr}</td>
-        <td class="wins">${entry.wins}</td>
-        <td class="losses">${entry.losses}</td>
+        <td class="rank" data-label="Rank">#${rank}</td>
+        <td class="name" data-label="Name">${escapeHtml(entry.name)}</td>
+        <td class="tier-cell" data-label="Tier"><span class="tier ${tierClass}">${tier}</span></td>
+        <td class="score" data-label="SP">${sp} SP</td>
+        <td class="winrate" data-label="Win Rate">${wr}</td>
+        <td class="wins" data-label="Wins">${entry.wins}</td>
+        <td class="losses" data-label="Losses">${entry.losses}</td>
       </tr>`;
     });
 
