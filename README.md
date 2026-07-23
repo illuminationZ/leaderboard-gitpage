@@ -83,4 +83,4 @@ leaderboard-gitpage/
 - GitHub Pages is a **static site host** — all JavaScript runs in the browser
 - No server-side execution (no Node.js, no backend)
 - External API calls work via `fetch()` but may be subject to CORS restrictions
-- For private APIs or custom backends, use a proxy service like [cors-anywhere](https://github.com/Rob--W/cors-anywhere)
+- For private APIs or custom backends, use a proxy service like [cors-anywhere](https://github.com/Rob--W/cors-anywhere).
