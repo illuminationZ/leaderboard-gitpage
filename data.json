@@ -2,7 +2,7 @@
   {
     "name": "Makii",
     "wins": 0,
-    "losses": 0
+    "losses": 1
   },
   {
     "name": "Nilout",
@@ -27,12 +27,12 @@
   {
     "name": "Jojo",
     "wins": 0,
-    "losses": 1
+    "losses": 2
   },
   {
     "name": "Nilun",
     "wins": 0,
-    "losses": 2
+    "losses": 3
   },
   {
     "name": "Tom",
@@ -61,7 +61,7 @@
   },
   {
     "name": "Tia",
-    "wins": 0,
+    "wins": 1,
     "losses": 1
   }
 ]
