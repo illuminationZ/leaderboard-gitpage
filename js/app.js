@@ -45,9 +45,9 @@ document.addEventListener('DOMContentLoaded', async function() {
     const container = document.getElementById('entries');
     if (!container || !entries.length) return;
 
-    // Sort by win rate descending, then assign rank
+    // Sort by wins descending, then assign rank
     const sorted = [...entries].sort(
-      (a, b) => calculateWinRate(b.wins, b.losses) - calculateWinRate(a.wins, a.losses) || (b.wins + b.losses) - (a.wins + a.losses)
+      (a, b) => b.wins - a.wins || b.losses - a.losses
     );
 
     let html = '<thead><tr>';
