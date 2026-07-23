@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', async function() {
   async function fetchLeaderboardData() {
     const response = await fetch('data.json');
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    return response.json();
+    const result = await response.json();
+    return Array.isArray(result) ? result : [];
   }
 
   // --- Calculate SP from wins/losses (fixed formula) ---
@@ -50,10 +51,6 @@ document.addEventListener('DOMContentLoaded', async function() {
   function initials(name) {
     return name.trim().charAt(0).toUpperCase();
   }
-    // Sort by wins descending, then assign rank
-    const sorted = [...entries].sort(
-      (a, b) => b.wins - a.wins || b.losses - a.losses
-    );
 
   const tierIcon = '<svg class="tier-icon" aria-hidden="true"><use href="#icon-shield"></use></svg>';
   const spIcon   = '<svg class="sp-icon" aria-hidden="true"><use href="#icon-star"></use></svg>';
@@ -361,8 +358,9 @@ document.addEventListener('DOMContentLoaded', async function() {
 
   // --- Bootstrap ---
   try {
-    const data = await fetchLeaderboardData();
-    renderLeaderboard(data);
+    let entries = await fetchLeaderboardData();
+    if (!Array.isArray(entries)) entries = [];
+    renderLeaderboard(entries);
   } catch (error) {
     console.error('Error loading leaderboard:', error.message);
     document.getElementById('entries').innerHTML =
