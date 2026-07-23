@@ -50,6 +50,10 @@ document.addEventListener('DOMContentLoaded', async function() {
   function initials(name) {
     return name.trim().charAt(0).toUpperCase();
   }
+    // Sort by wins descending, then assign rank
+    const sorted = [...entries].sort(
+      (a, b) => b.wins - a.wins || b.losses - a.losses
+    );
 
   const tierIcon = '<svg class="tier-icon" aria-hidden="true"><use href="#icon-shield"></use></svg>';
   const spIcon   = '<svg class="sp-icon" aria-hidden="true"><use href="#icon-star"></use></svg>';
