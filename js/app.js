@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   const PAGE_SIZE = 6;
 
   // --- Fetch & compute leaderboard from data.json ---
+  // updated on 2023-09-15
   async function fetchLeaderboardData() {
     const response = await fetch('data.json');
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
