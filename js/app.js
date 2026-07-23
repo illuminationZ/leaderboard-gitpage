@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   // --- Render leaderboard entries: stat cards, podium (top 3), and the paginated table ---
   function renderLeaderboard(entries) {
     const sorted = [...entries].sort(
-      (a, b) => winRateValue(b.wins, b.losses) - winRateValue(a.wins, a.losses) || (b.wins + b.losses) - (a.wins + a.losses)
+      (a, b) => b.wins - a.wins || b.losses - a.losses
     );
 
     const ranked = sorted.map((entry, index) => {
