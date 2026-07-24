@@ -617,12 +617,13 @@ body::before {
 }
 
 .entries-table td {
+  width: auto;
   padding: 0.75rem 0.5rem;
   vertical-align: middle;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .entries-table tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   transition: background 0.2s ease;
 }
 
@@ -651,6 +652,7 @@ body::before {
 }
 
 .name {
+  height: auto;
   font-weight: 500;
   color: #fff;
   display: flex;
@@ -659,8 +661,8 @@ body::before {
 }
 
 .avatar {
-  width: 28px;
-  height: 28px;
+  width: 40px;
+  height:40px;
   flex: none;
   border-radius: 50%;
   display: flex;
@@ -718,8 +720,7 @@ body::before {
 }
 
 .winrate {
-  display: flex;
-  flex-direction: column;
+  
   gap: 0.3rem;
   min-width: 90px;
 }
@@ -1019,6 +1020,7 @@ footer {
     text-overflow: ellipsis;
     white-space: nowrap;
     display: table-cell;
+
   }
 
   .tier {
