@@ -2,12 +2,12 @@
   {
     "name": "Makii",
     "wins": 0,
-    "losses": 2
+    "losses": 4
   },
   {
     "name": "Nilout",
     "wins": 2,
-    "losses": 0
+    "losses": 1
   },
   {
     "name": "Bounyou",
@@ -16,7 +16,7 @@
   },
   {
     "name": "Bow",
-    "wins": 1,
+    "wins": 3,
     "losses": 0
   },
   {
@@ -32,12 +32,12 @@
   {
     "name": "Nilun",
     "wins": 0,
-    "losses": 3
+    "losses": 4
   },
   {
     "name": "Tom",
     "wins": 0,
-    "losses": 1
+    "losses": 2
   },
   {
     "name": "Victor",
